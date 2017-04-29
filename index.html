@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Costruisci Kerub!</title>
+
+    <script src="libs/js/jquery-3.2.1.min.js"></script>
+    <script src="libs/js/jquery-ui.min.js"></script>
+    <script src="libs/js/bootstrap.min.js"></script>
+    <script src="js/loadComponents.js"></script>
+    <script src="js/index.js"></script>
+
+    <link rel="stylesheet" href="libs/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="libs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" id="rowDiv">
+            <div class="col-sm-3 col-md-3 sidebar">
+                <img src="img/logo.png" class="logo"/>
+                <hr>
+                <div id="components">
+                </div>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 main sidebar">
+                <h1 class="page-header">Costruisci Kerub</h1>
+
+                <div class="build-section">
+                    <img src="img/render/telaio.png" class="telaio">
+
+                    <div id="dropHere"></div>
+                    <div id="dragMe"></div>
+
+
+                </div>
+                <hr>
+                <div class="description-box">
+                    <h2 class="subheader">Descrizione componente</h2>
+                    <span id="component-description">N.A.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
