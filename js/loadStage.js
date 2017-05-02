@@ -8,30 +8,32 @@ var stagesDir = "./img/stages/";
 var stageImgPrefix = "stage";
 var stageImgExtension = ".png";
 var activeAreaSelector = "#active-area";
-var activeAreaRadius = 20;
 
-function getRelativeCoords(coords)
+function getRelativeCoords(coords, radius)
 {
-    var x = coords[0];
-    var y = coords[1];
+    var centerX = coords[0];
+    var centerY = coords[1];
 
     var stageImg = $(stageImgSelector)[0];
-    xNew = x*stageImg.width - activeAreaRadius;
-    yNew = y*stageImg.height - activeAreaRadius;
+    var relativeX = centerX*stageImg.clientWidth - radius;
+    var relativeY = centerY*stageImg.clientHeight - radius;
 
-    return [xNew, yNew];
+    return [relativeX, relativeY];
 }
 
 function placeArea(component)
 {
     var activeArea = $(activeAreaSelector);
 
-
-    console.log(component.coords);
-    var coords = getRelativeCoords(component.coords);
+    console.log(component.coords, component.radius);
+    var coords = getRelativeCoords(component.coords, component.radius);
 
     activeArea.css('left', coords[0] + "px");
     activeArea.css('top', coords[1] + "px");
+
+    activeArea.css('width', component.radius*2 + "px");
+    activeArea.css('height', component.radius*2 + "px");
+    activeArea.css('border-radius', component.radius + "px");
 }
 
 function loadStage(stageNumber)
