@@ -2,7 +2,7 @@
  * Created by Raff on 29/04/2017.
  */
 
-var currentStage = 8;
+var currentStage = 1;
 
 var stagesNumber = 13;
 

@@ -27,7 +27,7 @@ hr {
     height:75%;
     bottom:25%;
     text-align: center;
-    cursor: default;
+    cursor: pointer;
 }
 
 .build-section img {

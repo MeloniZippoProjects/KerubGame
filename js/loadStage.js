@@ -42,9 +42,6 @@ function loadStage(stageNumber)
     var imgNode = $(stageImgSelector)[0];
     imgNode.src = stagesDir + stageImgPrefix + stageNumber + stageImgExtension;
 
-    //TODO - show new component
     component = loadComponent(stageNumber);
-
-    //TODO - active areas creation
-    $(imgNode).ready(placeArea.bind(imgNode,component));
+    $(imgNode).ready(placeArea.bind(imgNode, component));
 }

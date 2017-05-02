@@ -19,7 +19,66 @@ function loadComponents() {
 }
 */
 
-var componentNames = ['Gruppo ruota', 'Pedaliera', 'Ali posteriori', 'Seduta', 'Pancia Laterale', 'Volante', 'Ali frontali']; //TODO - Add components name with same order as images
+var componentNames = //12 components
+    [
+        'Motore, trasmissione, cambio',
+        'Aspirazione',
+        'Scarico',
+        'Radiatore',
+        'Sospensione, Portamozzi, Mozzi',
+        'Seduta',
+        'Volante',
+        'Pedaliera',
+        'Carene',
+        'Ali posteriori',
+        'Ali frontali',
+        'Ruote'
+    ];
+
+var componentDescriptions = //description for components
+    [
+        //Motore
+        "Questo è il telaio di Kerub X, la nostra vettura. " +
+        "Da solo però non muoversi, ha bisogno di qualcosa " +
+        "che possa dargli la spinta...",
+        //Aspirazione
+        "Abbiamo aggiunto il motore, cambio e la trasmissione. " +
+        "Però il motore ha bisogno di aspirare aria dall'esterno. " +
+        "Bisogna aggiungerci un Plenum",
+        //Scarico
+        "L'aria che entra ha bisogno anche di uscire... " +
+        "Attenzione: questo pezzo non è posizionato dove" +
+        "solitamente si trova nelle automobili convenzionali!",
+        //Radiatore
+        "Il motore raggiunge temperature molto elevate. " +
+        "Per fare in modo che non fonda c'è bisogno di un circuito " +
+        "idraulico per raffreddarlo. Aiutino, anche questo pezzo, " +
+        "come lo scarico precedente, non è posizionato lì " +
+        "dove solitamente si trova nelle automobili convenzionali.",
+        //Sospensioni
+        "Ora che tutta la zona motore è completata bisogna trovare " +
+        "il modo per tenerla \"sospesa\" dal terreno",
+        //Seduta
+        "Bene, ma il pilota dovrà pure sedersi da qualche parte.....",
+        //Volante
+        "....e dovrà avere uno strumento per decidere " +
+        "la direzione in cui muoversi....",
+        //Pedaliera
+        " ...ed avere la possibilità di " +
+        "accelerare e frenare a piacimento.",
+        //Carene
+        "Bene. Ora Kerub X è quasi pronta. è il momento di vestirla!",
+        //Ali posteriori
+        "Aggiungiamo qualcosa che faccia tenere attaccate" +
+        " al terreno le ruote di trazione",
+        //Ali Frontali
+        "...e quelle folli per aumentare il carico complessivo.",
+        //Ruote
+        "uhmmm, forse ci manca un ultima cosa...",
+        //Fine
+        "Ed ecco a voi Kerub X!!!"
+    ];
+
 var componentImgSelector = "#component-img";
 var componentNameSelector = "#component-name";
 var componentDescriptionSelector = "#component-description";
@@ -36,33 +95,50 @@ function Component(name, number, description, coords, radius)
     this.radius = radius;
 }
 
-var components = [
-    new Component('Gruppo Ruota', 1, '...', [0.39, 0.52], 75),
-    new Component('Pedaliera', 2, '...', [0.39, 0.385], 55),
-    new Component('Boh qualcosa', 3, '...', [0.39, 0.65], 65),
-    new Component('Boh qualcosa', 4, '...', [0.39, 0.65], 65),  //Multipoint
-    new Component('Boh qualcosa', 5, '...', [0.39, 0.65], 65),  //Multipoint
-    new Component('Boh qualcosa', 6, '...', [0.48, 0.56], 110),
-    new Component('Boh qualcosa', 6, '...', [0.55, 0.56], 50),
-    new Component('Boh qualcosa', 6, '...', [0.67, 0.72], 50)
-
-
+var components = [//component name, comp number, comp desc, active area coordinates, radius
+    new Component(componentNames[0], 1, componentDescriptions[0], [0.39, 0.52], 75),
+    new Component(componentNames[1], 2, componentDescriptions[1], [0.39, 0.385], 55),
+    new Component(componentNames[2], 3, componentDescriptions[2], [0.39, 0.65], 65),
+    new Component(componentNames[3], 4, componentDescriptions[3], [0.34, 0.40], 30),  //Multipoint
+    new Component(componentNames[4], 5, componentDescriptions[4], [0.60, 0.65], 110),  //Multipoint
+    new Component(componentNames[5], 6, componentDescriptions[5], [0.48, 0.56], 110),
+    new Component(componentNames[6], 7, componentDescriptions[6], [0.55, 0.56], 50),
+    new Component(componentNames[7], 8, componentDescriptions[7], [0.67, 0.72], 50),
+    new Component(componentNames[8], 9, componentDescriptions[8], [0.55, 0.6], 100),
+    new Component(componentNames[9], 10, componentDescriptions[9], [0.3, 0.3], 90),
+    new Component(componentNames[10], 11, componentDescriptions[10], [0.7, 0.72], 75),
+    new Component(componentNames[11], 12, componentDescriptions[11], [0.51, 0.75], 50) //multipoint
 ];
 
+function finish()
+{
+    $(componentImgSelector).hide();
+    $(componentNameSelector).text('Abbiamo finito!');
+    $(componentDescriptionSelector).text(componentDescriptions[12]);
+    $(activeAreaSelector).hide();
+}
 
 function loadComponent(componentNumber)
 {
     console.log("loading component " + componentNumber);
-    var component = components[componentNumber-1];
 
     var imgNode = $(componentImgSelector)[0];
-    imgNode.src = componentsDir + componentPrefix + componentNumber + componentSuffix;
-
     var nameNode = $(componentNameSelector);
-    nameNode.text(component.name);
-
     var descriptionNode = $(componentDescriptionSelector);
-    descriptionNode.text(component.description);
 
+    if(componentNumber < 13)
+    {
+        var component = components[componentNumber - 1];
+
+        imgNode.src = componentsDir + componentPrefix + componentNumber + componentSuffix;
+
+        nameNode.text(component.name);
+
+        descriptionNode.text(component.description);
+    }
+    else
+    {
+        finish();
+    }
     return component;
 }
