@@ -15,9 +15,9 @@ hr {
 }
 
 .component {
-    margin: 5%;
-    width:40%;
-    border-radius:15%;
+    margin: 10%;
+    width:80%;
+    border-radius:10%;
     border-style:solid;
     border-width:2px;
     border-color: #5d5d5d;
@@ -27,10 +27,21 @@ hr {
     height:75%;
     bottom:25%;
     text-align: center;
+    cursor: default;
 }
 
-.telaio {
+.build-section img {
+    cursor: inherit;
+}
+
+.stage {
     height: 100%;
+    display: inline-block;
+    position:relative;
+}
+
+.stage img {
+    height:100%;
 }
 
 .description-box {
@@ -57,4 +68,33 @@ h2 {
 
 .onTop {
     z-index: 1000;
+}
+
+.sidebar .sub-header {
+    text-align:center;
+}
+
+#component-name {
+    margin-top:10%;
+    display:block;
+    text-align: center;
+    font-size: large;
+    font-weight:bold;
+}
+
+#active-area {
+    border-color: black;
+    border-style:solid;
+    display:block;
+    width:40px;
+    height:40px;
+    border-radius:20px;
+    position:absolute;
+    top:0;
+    left:0;
+    cursor:pointer;
+}
+
+body{
+    user-select: none;
 }
