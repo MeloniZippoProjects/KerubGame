@@ -2,7 +2,7 @@
  * Created by Raff on 29/04/2017.
  */
 
-var currentStage = 1;
+var currentStage = 8;
 
 var stagesNumber = 13;
 
@@ -13,10 +13,7 @@ function clickActiveArea()
 }
 
 $().ready(function() {
-    loadStage(currentStage);
-
     $(activeAreaSelector).click(clickActiveArea);
-
-
+    loadStage(currentStage);
 });
 

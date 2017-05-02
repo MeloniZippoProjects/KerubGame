@@ -27,19 +27,27 @@ var componentsDir = "./img/components/";
 var componentPrefix = "component";
 var componentSuffix = ".png";
 
-function Component(name, number, description, coords)
+function Component(name, number, description, coords, radius)
 {
     this.name = name;
     this.number = number;
     this.description = description;
     this.coords = coords;
+    this.radius = radius;
 }
 
-
 var components = [
-    new Component('Gruppo Ruota', 1, '...', [0.5, 0.5]),
-    new Component('Pedaliera', 2, '...', [0.3, 0.3])
-    ];
+    new Component('Gruppo Ruota', 1, '...', [0.39, 0.52], 75),
+    new Component('Pedaliera', 2, '...', [0.39, 0.385], 55),
+    new Component('Boh qualcosa', 3, '...', [0.39, 0.65], 65),
+    new Component('Boh qualcosa', 4, '...', [0.39, 0.65], 65),  //Multipoint
+    new Component('Boh qualcosa', 5, '...', [0.39, 0.65], 65),  //Multipoint
+    new Component('Boh qualcosa', 6, '...', [0.48, 0.56], 110),
+    new Component('Boh qualcosa', 6, '...', [0.55, 0.56], 50),
+    new Component('Boh qualcosa', 6, '...', [0.67, 0.72], 50)
+
+
+];
 
 
 function loadComponent(componentNumber)
@@ -57,5 +65,4 @@ function loadComponent(componentNumber)
     descriptionNode.text(component.description);
 
     return component;
-
 }
