@@ -25,7 +25,7 @@ function getRelativeCoords(coords, radius)
 function placeArea(activeAreaSelector, absoluteCoords, radius)
 {
     var activeArea = $(activeAreaSelector);
-    console.log(absoluteCoords, radius);
+    console.log(activeArea);
 
     if(radius > 0) {
         var relativeCoords = getRelativeCoords(absoluteCoords, radius);
@@ -36,6 +36,7 @@ function placeArea(activeAreaSelector, absoluteCoords, radius)
         activeArea.css('width', radius * 2 + "px");
         activeArea.css('height', radius * 2 + "px");
         activeArea.css('border-radius', radius + "px");
+		activeArea.css('display', 'block');
     }
     else {
         activeArea.css('display', 'none');

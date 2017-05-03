@@ -71,15 +71,15 @@ var components = [//component name, comp number, comp desc, active area coordina
     new Component(componentNames[0], 1, componentDescriptions[0], [ [0.39, 0.52], [0, 0] ], [75, 0]),
     new Component(componentNames[1], 2, componentDescriptions[1], [ [0.39, 0.385] , [0, 0] ], [55, 0]),
     new Component(componentNames[2], 3, componentDescriptions[2], [ [0.39, 0.65] , [0, 0] ], [65, 0]),
-    new Component(componentNames[3], 4, componentDescriptions[3], [ [0.34, 0.40] , [0, 0] ], [30, 0]),  //Multipoint
-    new Component(componentNames[4], 5, componentDescriptions[4], [ [0.60, 0.65] , [0, 0] ], [110, 0]),  //Multipoint
+    new Component(componentNames[3], 4, componentDescriptions[3], [ [0.34, 0.40] , [0.5, 0.5] ], [30, 30]),  //Multipoint
+    new Component(componentNames[4], 5, componentDescriptions[4], [ [0.60, 0.65] , [0.3, 0.5] ], [110, 70]),  //Multipoint
     new Component(componentNames[5], 6, componentDescriptions[5], [ [0.48, 0.56] , [0, 0] ], [110, 0]),
     new Component(componentNames[6], 7, componentDescriptions[6], [ [0.55, 0.56] , [0, 0] ], [50, 0]),
     new Component(componentNames[7], 8, componentDescriptions[7], [ [0.67, 0.72] , [0, 0] ], [50, 0]),
     new Component(componentNames[8], 9, componentDescriptions[8], [ [0.55, 0.6] , [0, 0] ], [100, 0]),
     new Component(componentNames[9], 10, componentDescriptions[9], [ [0.3, 0.3] , [0, 0] ], [90, 0]),
     new Component(componentNames[10], 11, componentDescriptions[10], [ [0.7, 0.72] , [0, 0] ], [75, 0]),
-    new Component(componentNames[11], 12, componentDescriptions[11], [ [0.51, 0.75] , [0, 0] ], [50, 0]) //multipoint
+    new Component(componentNames[11], 12, componentDescriptions[11], [ [0.51, 0.75] , [0.27, 0.57] ], [50, 50]) //multipoint
 ];
 
 function finish()
