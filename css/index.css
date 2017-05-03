@@ -4,14 +4,16 @@
     width:100%;
 }
 
+.page-header {
+    border-bottom: 1px solid black;
+}
+
 #components {
     margin-top:10px;
 }
 
-hr {
-    border-color:gray;
-    border-style:solid;
-    border-width:1px;
+.component-bar {
+    color: whitesmoke;
 }
 
 .component {
@@ -21,13 +23,28 @@ hr {
     border-style:solid;
     border-width:2px;
     border-color: #5d5d5d;
+    background-color: whitesmoke;
+}
+
+hr {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+h1 {
+    font-size: 45px;
 }
 
 .build-section {
-    height:75%;
-    bottom:25%;
+    height:65%;
+    bottom:35%;
     text-align: center;
     cursor: pointer;
+    
+    background-image: url(../img/box-backgrounds/g5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .build-section img {
@@ -50,8 +67,12 @@ hr {
 }
 
 h2 {
-    font-size:x-large;
+    font-size: x-large;
     font-weight: bold;
+}
+
+#component-description {
+    font-size: x-large;
 }
 
 #dropHere {
@@ -70,20 +91,27 @@ h2 {
     z-index: 1000;
 }
 
-.sidebar .sub-header {
+.component-sub-header {
+    margin-top: 10%;
     text-align:center;
+    font-size: 40px;
+}
+
+.description-sub-header {
+    text-align:center;
+    font-size: 35px;
 }
 
 #component-name {
-    margin-top:10%;
+    margin-top:20%;
     display:block;
     text-align: center;
-    font-size: large;
+    font-size: xx-large;
     font-weight:bold;
 }
 
 .active-area {
-    border-color: black;
+    border-color: transparent;
     border-style:solid;
     display:block;
     width:40px;
@@ -97,4 +125,5 @@ h2 {
 
 body{
     user-select: none;
+    font-family: "Trebuchet MS";
 }

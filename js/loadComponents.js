@@ -1,24 +1,3 @@
-/**
- * Created by Raff on 29/04/2017.
- */
-
-//var components = [ "FrontWing", "GruppoRuota", "RearWing", "seduta", "sidepod", "volante"];
-
-/*
-function loadComponents() {
-    var componentsDiv = $("#components")[0];
-
-    for (var i = 0; i < components.length; i++)
-    {
-        var component = new Image;
-        component.src = "./img/render/" + components[i] + ".png";
-        $(component).addClass("component");
-        component.title = components[i];
-        componentsDiv.appendChild(component);
-    }
-}
-*/
-
 var componentNames = //12 components
     [
         'Motore, trasmissione, cambio',
@@ -38,45 +17,38 @@ var componentNames = //12 components
 var componentDescriptions = //description for components
     [
         //Motore
-        "Questo è il telaio di Kerub X, la nostra vettura. " +
-        "Da solo però non muoversi, ha bisogno di qualcosa " +
-        "che possa dargli la spinta...",
+        "Questo è il telaio di Kerub X, la nostra ultima monoposto. " +
+        "Come primo passo, aggiungere il motore, il cambio e la trasmissione",
         //Aspirazione
-        "Abbiamo aggiunto il motore, cambio e la trasmissione. " +
-        "Però il motore ha bisogno di aspirare aria dall'esterno. " +
-        "Bisogna aggiungerci un Plenum",
+        "Il motore ha bisogno di aspirare aria dall'esterno per la combustione. " +
+        "Procuriamogli un polmone, il 'Plenum'",
         //Scarico
-        "L'aria che entra ha bisogno anche di uscire... " +
-        "Attenzione: questo pezzo non è posizionato dove " +
-        "solitamente si trova nelle automobili convenzionali!",
+        "L'aria, dopo la combustione, deve essere espulsa dallo scarico. " +
+        "Indizio: questo componente non è collocato nella sua posizione usuale",
         //Radiatore
-        "Il motore raggiunge temperature molto elevate. " +
-        "Per fare in modo che non fonda c'è bisogno di un circuito " +
-        "idraulico per raffreddarlo. Aiutino, anche questo pezzo, " +
-        "come lo scarico precedente, non è posizionato lì " +
-        "dove solitamente si trova nelle automobili convenzionali.",
+        "Poiché il motore raggiunge temperature molto elevate, " +
+        "è necessario un circuito idraulico di raffreddamento. Indizio: anche questo pezzo, " +
+        "come il precedente, ha una posizione inusuale",
         //Sospensioni
-        "Ora che tutta la zona motore è completata bisogna trovare " +
-        "il modo per tenerla \"sospesa\" dal terreno",
+        "La zona motore è completata. È necessario adesso passare all'assetto del veicolo.",
         //Seduta
-        "Bene, ma il pilota dovrà pure sedersi da qualche parte.....",
+        "Ottimo! Ma il pilota dovrà pur sedersi da qualche parte...",
         //Volante
-        "....e dovrà avere uno strumento per decidere " +
-        "la direzione in cui muoversi....",
+        "... e dovrà avere uno strumento per decidere " +
+        "la direzione in cui andare...",
         //Pedaliera
-        " ...ed avere la possibilità di " +
+        " ... ed avere la possibilità di " +
         "accelerare e frenare a piacimento.",
         //Carene
-        "Bene. Ora Kerub X è quasi pronta. è il momento di vestirla!",
+        "Bene. Ora Kerub X è quasi pronta. È il momento di pensare all'aerodinamica",
         //Ali posteriori
-        "Aggiungiamo qualcosa che faccia tenere attaccate" +
-        " al terreno le ruote di trazione",
+        "Le ali posteriori sono necessarie per mantenere l'aderenza al terreno, soprattutto alle alte velocità...",
         //Ali Frontali
-        "...e quelle folli per aumentare il carico complessivo.",
+        "...insieme a quelle frontali",
         //Ruote
-        "uhmmm, forse ci manca un ultima cosa...",
+        "Anche la qualità dei pneumatici è fontamentale per gareggiare",
         //Fine
-        "Ed ecco a voi Kerub X!!!"
+        "L'assemblaggio è completato, ecco a voi Kerub X!"
     ];
 
 var componentImgSelector = "#component-img";
