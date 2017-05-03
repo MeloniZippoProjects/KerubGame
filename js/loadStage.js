@@ -7,7 +7,8 @@ var stageImgSelector = "#stage-img";
 var stagesDir = "./img/stages/";
 var stageImgPrefix = "stage";
 var stageImgExtension = ".png";
-var activeAreaSelector = "#active-area";
+var mainActiveAreaSelector = "#main-active-area";
+var secondaryActiveAreaSelector = "#secondary-active-area";
 
 function getRelativeCoords(coords, radius)
 {
@@ -21,19 +22,24 @@ function getRelativeCoords(coords, radius)
     return [relativeX, relativeY];
 }
 
-function placeArea(component)
+function placeArea(activeAreaSelector, absoluteCoords, radius)
 {
     var activeArea = $(activeAreaSelector);
+    console.log(absoluteCoords, radius);
 
-    console.log(component.coords, component.radius);
-    var coords = getRelativeCoords(component.coords, component.radius);
+    if(radius > 0) {
+        var relativeCoords = getRelativeCoords(absoluteCoords, radius);
 
-    activeArea.css('left', coords[0] + "px");
-    activeArea.css('top', coords[1] + "px");
+        activeArea.css('left', relativeCoords[0] + "px");
+        activeArea.css('top', relativeCoords[1] + "px");
 
-    activeArea.css('width', component.radius*2 + "px");
-    activeArea.css('height', component.radius*2 + "px");
-    activeArea.css('border-radius', component.radius + "px");
+        activeArea.css('width', radius * 2 + "px");
+        activeArea.css('height', radius * 2 + "px");
+        activeArea.css('border-radius', radius + "px");
+    }
+    else {
+        activeArea.css('display', 'none');
+    }
 }
 
 function loadStage(stageNumber)
@@ -43,5 +49,10 @@ function loadStage(stageNumber)
     imgNode.src = stagesDir + stageImgPrefix + stageNumber + stageImgExtension;
 
     component = loadComponent(stageNumber);
-    $(imgNode).ready(placeArea.bind(imgNode, component));
+
+     $(imgNode).ready(
+         function() {
+             placeArea(mainActiveAreaSelector, component.coords[0], component.radius[0]);
+             placeArea(secondaryActiveAreaSelector, component.coords[1], component.radius[1]);
+         });
 }

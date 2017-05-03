@@ -82,7 +82,7 @@ h2 {
     font-weight:bold;
 }
 
-#active-area {
+.active-area {
     border-color: black;
     border-style:solid;
     display:block;

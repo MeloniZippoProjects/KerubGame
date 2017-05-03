@@ -47,7 +47,7 @@ var componentDescriptions = //description for components
         "Bisogna aggiungerci un Plenum",
         //Scarico
         "L'aria che entra ha bisogno anche di uscire... " +
-        "Attenzione: questo pezzo non è posizionato dove" +
+        "Attenzione: questo pezzo non è posizionato dove " +
         "solitamente si trova nelle automobili convenzionali!",
         //Radiatore
         "Il motore raggiunge temperature molto elevate. " +
@@ -96,18 +96,18 @@ function Component(name, number, description, coords, radius)
 }
 
 var components = [//component name, comp number, comp desc, active area coordinates, radius
-    new Component(componentNames[0], 1, componentDescriptions[0], [0.39, 0.52], 75),
-    new Component(componentNames[1], 2, componentDescriptions[1], [0.39, 0.385], 55),
-    new Component(componentNames[2], 3, componentDescriptions[2], [0.39, 0.65], 65),
-    new Component(componentNames[3], 4, componentDescriptions[3], [0.34, 0.40], 30),  //Multipoint
-    new Component(componentNames[4], 5, componentDescriptions[4], [0.60, 0.65], 110),  //Multipoint
-    new Component(componentNames[5], 6, componentDescriptions[5], [0.48, 0.56], 110),
-    new Component(componentNames[6], 7, componentDescriptions[6], [0.55, 0.56], 50),
-    new Component(componentNames[7], 8, componentDescriptions[7], [0.67, 0.72], 50),
-    new Component(componentNames[8], 9, componentDescriptions[8], [0.55, 0.6], 100),
-    new Component(componentNames[9], 10, componentDescriptions[9], [0.3, 0.3], 90),
-    new Component(componentNames[10], 11, componentDescriptions[10], [0.7, 0.72], 75),
-    new Component(componentNames[11], 12, componentDescriptions[11], [0.51, 0.75], 50) //multipoint
+    new Component(componentNames[0], 1, componentDescriptions[0], [ [0.39, 0.52], [0, 0] ], [75, 0]),
+    new Component(componentNames[1], 2, componentDescriptions[1], [ [0.39, 0.385] , [0, 0] ], [55, 0]),
+    new Component(componentNames[2], 3, componentDescriptions[2], [ [0.39, 0.65] , [0, 0] ], [65, 0]),
+    new Component(componentNames[3], 4, componentDescriptions[3], [ [0.34, 0.40] , [0, 0] ], [30, 0]),  //Multipoint
+    new Component(componentNames[4], 5, componentDescriptions[4], [ [0.60, 0.65] , [0, 0] ], [110, 0]),  //Multipoint
+    new Component(componentNames[5], 6, componentDescriptions[5], [ [0.48, 0.56] , [0, 0] ], [110, 0]),
+    new Component(componentNames[6], 7, componentDescriptions[6], [ [0.55, 0.56] , [0, 0] ], [50, 0]),
+    new Component(componentNames[7], 8, componentDescriptions[7], [ [0.67, 0.72] , [0, 0] ], [50, 0]),
+    new Component(componentNames[8], 9, componentDescriptions[8], [ [0.55, 0.6] , [0, 0] ], [100, 0]),
+    new Component(componentNames[9], 10, componentDescriptions[9], [ [0.3, 0.3] , [0, 0] ], [90, 0]),
+    new Component(componentNames[10], 11, componentDescriptions[10], [ [0.7, 0.72] , [0, 0] ], [75, 0]),
+    new Component(componentNames[11], 12, componentDescriptions[11], [ [0.51, 0.75] , [0, 0] ], [50, 0]) //multipoint
 ];
 
 function finish()

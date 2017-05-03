@@ -13,7 +13,8 @@ function clickActiveArea()
 }
 
 $().ready(function() {
-    $(activeAreaSelector).click(clickActiveArea);
-    loadStage(currentStage);
+    $(".active-area").click(clickActiveArea);
+
+    $(stageImgSelector).ready(loadStage.bind(this, currentStage));
 });
 
