@@ -46,7 +46,7 @@ var componentDescriptions = //description for components
         //Ali Frontali
         "...insieme a quelle frontali",
         //Ruote
-        "Anche la qualità dei pneumatici è fontamentale per gareggiare",
+        "Anche la qualità dei pneumatici è fondamentale per gareggiare",
         //Fine
         "L'assemblaggio è completato, ecco a voi Kerub X!"
     ];
