@@ -90,6 +90,13 @@ function finish()
     $(activeAreaSelector).hide();
 }
 
+function preloadComponentImages()
+{
+    for( var componentNumber = 1; componentNumber < 13; componentNumber++){
+        (new Image()).src = componentsDir + componentPrefix + componentNumber + componentSuffix;
+    }
+}
+
 function loadComponent(componentNumber)
 {
     console.log("loading component " + componentNumber);

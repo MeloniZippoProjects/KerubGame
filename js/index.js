@@ -13,8 +13,10 @@ function clickActiveArea()
 }
 
 $().ready(function() {
-    $(".active-area").click(clickActiveArea);
+    preloadComponentImages();
+    preloadStageImages()
 
+    $(".active-area").click(clickActiveArea);
     $(stageImgSelector).ready(loadStage.bind(this, currentStage));
 });
 

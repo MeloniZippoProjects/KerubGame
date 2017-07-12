@@ -43,6 +43,12 @@ function placeArea(activeAreaSelector, absoluteCoords, radius)
     }
 }
 
+function preloadStageImages(){
+    for(var stageNumber = 1; stageNumber <= 13; stageNumber++) {
+        (new Image()).src = stagesDir + stageImgPrefix + stageNumber + stageImgExtension;
+    }
+}
+
 function loadStage(stageNumber)
 {
     console.log("loading stage " + stageNumber);
