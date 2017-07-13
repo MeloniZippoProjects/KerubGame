@@ -51,7 +51,7 @@ function loadStage(stageNumber)
 
     component = loadComponent(stageNumber);
 
-     $(imgNode).ready(
+     $(imgNode).imagesLoaded(
          function() {
              placeArea(mainActiveAreaSelector, component.coords[0], component.radius[0]);
              placeArea(secondaryActiveAreaSelector, component.coords[1], component.radius[1]);
