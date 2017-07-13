@@ -56,12 +56,6 @@ function loadStage(stageNumber)
          function() {
              placeArea(mainActiveAreaSelector, component.coords[0], component.radius[0]);
              placeArea(secondaryActiveAreaSelector, component.coords[1], component.radius[1]);
-		
-		 //FDR
-		if(stageNumber == 1 ){
-		    var x = document.getElementById("main-active-area").id;
-		    x.setAttribute("style", "left: 233,88 px;");
-		}
 		 
          });
 }
