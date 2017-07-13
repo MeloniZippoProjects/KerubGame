@@ -18,7 +18,8 @@ var componentDescriptions = //description for components
     [
         //Motore
         "Questo è il telaio di Kerub X, la nostra ultima monoposto. " +
-        "Come primo passo, aggiungere il motore, il cambio e la trasmissione",
+        "Come primo passo, aggiungere il motore, il cambio e la trasmissione. " +
+        "NB: Purtroppo c'è un bug in questo livello, ricarica la pagina un paio di volte!",
         //Aspirazione
         "Il motore ha bisogno di aspirare aria dall'esterno per la combustione. " +
         "Procuriamogli un polmone, il 'Plenum'",

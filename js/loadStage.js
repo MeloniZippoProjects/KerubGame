@@ -1,8 +1,3 @@
-/**
- * Created by enric on 30/04/2017.
- */
-
-
 var stageImgSelector = "#stage-img";
 var stagesDir = "./img/stages/";
 var stageImgPrefix = "stage";
