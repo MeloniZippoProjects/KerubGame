@@ -1,8 +1,3 @@
-/**
- * Created by enric on 30/04/2017.
- */
-
-
 var stageImgSelector = "#stage-img";
 var stagesDir = "./img/stages/";
 var stageImgPrefix = "stage";
@@ -43,6 +38,12 @@ function placeArea(activeAreaSelector, absoluteCoords, radius)
     }
 }
 
+function preloadStageImages(){
+    for(var stageNumber = 1; stageNumber <= 13; stageNumber++) {
+        (new Image()).src = stagesDir + stageImgPrefix + stageNumber + stageImgExtension;
+    }
+}
+
 function loadStage(stageNumber)
 {
     console.log("loading stage " + stageNumber);
@@ -55,5 +56,12 @@ function loadStage(stageNumber)
          function() {
              placeArea(mainActiveAreaSelector, component.coords[0], component.radius[0]);
              placeArea(secondaryActiveAreaSelector, component.coords[1], component.radius[1]);
+		
+		 //FDR
+		if(stageNumber == 1 ){
+		    var x = document.getElementById("main-active-area").id;
+		    x.setAttribute("style", "left: 233,88 px;");
+		}
+		 
          });
 }

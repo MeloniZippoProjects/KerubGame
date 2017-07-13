@@ -1,7 +1,3 @@
-/**
- * Created by Raff on 29/04/2017.
- */
-
 var currentStage = 1;
 
 var stagesNumber = 13;
@@ -14,7 +10,5 @@ function clickActiveArea()
 
 $(function() {
     $(".active-area").click(clickActiveArea);
-
     $(stageImgSelector).ready(loadStage.bind(this, currentStage));
 });
-

@@ -18,7 +18,7 @@ var componentDescriptions = //description for components
     [
         //Motore
         "Questo è il telaio di Kerub X, la nostra ultima monoposto. " +
-        "Come primo passo, aggiungere il motore, il cambio e la trasmissione",
+        "Come primo passo, aggiungere il motore, il cambio e la trasmissione. ",
         //Aspirazione
         "Il motore ha bisogno di aspirare aria dall'esterno per la combustione. " +
         "Procuriamogli un polmone, il 'Plenum'",
@@ -88,6 +88,13 @@ function finish()
     $(componentNameSelector).text('Abbiamo finito!');
     $(componentDescriptionSelector).text(componentDescriptions[12]);
     $(activeAreaSelector).hide();
+}
+
+function preloadComponentImages()
+{
+    for( var componentNumber = 1; componentNumber < 13; componentNumber++){
+        (new Image()).src = componentsDir + componentPrefix + componentNumber + componentSuffix;
+    }
 }
 
 function loadComponent(componentNumber)
